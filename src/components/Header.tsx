@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo_archipelago.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,30 +37,38 @@ const Header = () => {
         <div className="flex items-center justify-between h-14 sm:h-16 pill-nav px-4 sm:px-6">
           {/* Logo */}
           <div className="flex items-center min-w-0">
-            <a href="/" className="flex items-center gap-1.5 sm:gap-2">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-primary-foreground font-bold text-base sm:text-lg">P</span>
-              </div>
-              <span className="text-base sm:text-xl font-bold font-serif truncate">Perspective</span>
+            <a href="/" className="flex items-center gap-2 sm:gap-3">
+              <img 
+                src={logo} 
+                alt="Archipelago" 
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain flex-shrink-0"
+              />
+              <span className="text-lg sm:text-xl font-bold tracking-wide">
+                <span className="text-accent">ARCHI</span>
+                <span className="text-primary">PELAGO</span>
+              </span>
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
-            <a href="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
+          <nav className="hidden md:flex items-center gap-1">
+            <a href="/" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-full px-4 py-2 transition-all">
               Home
             </a>
-            <a href="/#articles" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Articles
+            <a href="/overview" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-full px-4 py-2 transition-all">
+              Overview
             </a>
-            <a href="/wellness" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Wellness
+            <a href="/news" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-full px-4 py-2 transition-all">
+              News & Events
             </a>
-            <a href="/travel" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Travel
+            <a href="/results" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-full px-4 py-2 transition-all">
+              Results
             </a>
-            <a href="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              About
+            <a href="/consortium" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-full px-4 py-2 transition-all">
+              Consortium
+            </a>
+            <a href="/contact" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-full px-4 py-2 transition-all">
+              Contact Us
             </a>
           </nav>
 
@@ -67,19 +76,15 @@ const Header = () => {
           <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
             <button
               onClick={toggleTheme}
-              className="p-1.5 sm:p-2 rounded-full hover:bg-muted/60 transition-all"
+              className="p-1.5 sm:p-2 rounded-full hover:bg-primary/10 transition-all"
               aria-label="Toggle theme"
             >
               {isDark ? (
-                <Sun className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Sun className="h-4 w-4 sm:h-5 sm:w-5 text-accent" />
               ) : (
                 <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
               )}
             </button>
-            
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all">
-              Join Now
-            </Button>
 
             {/* Mobile Menu Button */}
             <button
@@ -94,26 +99,26 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-4">
-              <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
+          <div className="md:hidden py-4 px-4 mt-2 bg-card rounded-2xl border border-border animate-fade-in">
+            <nav className="flex flex-col gap-2">
+              <a href="/" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-lg px-4 py-3 transition-colors">
                 Home
               </a>
-              <a href="/#articles" className="text-sm font-medium hover:text-accent transition-colors">
-                Articles
+              <a href="/overview" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-lg px-4 py-3 transition-colors">
+                Overview
               </a>
-              <a href="/wellness" className="text-sm font-medium hover:text-accent transition-colors">
-                Wellness
+              <a href="/news" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-lg px-4 py-3 transition-colors">
+                News & Events
               </a>
-              <a href="/travel" className="text-sm font-medium hover:text-accent transition-colors">
-                Travel
+              <a href="/results" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-lg px-4 py-3 transition-colors">
+                Results
               </a>
-              <a href="/about" className="text-sm font-medium hover:text-accent transition-colors">
-                About
+              <a href="/consortium" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-lg px-4 py-3 transition-colors">
+                Consortium
               </a>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
-                Join Now
-              </Button>
+              <a href="/contact" className="text-sm font-medium hover:bg-primary/10 hover:text-primary rounded-lg px-4 py-3 transition-colors">
+                Contact Us
+              </a>
             </nav>
           </div>
         )}
