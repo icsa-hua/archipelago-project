@@ -2,103 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Archipelago Design System - Teal & Orange palette */
 
 @layer base {
   :root {
-    /* Warm, sophisticated palette inspired by the design */
-    --background: 36 44% 96%;
-    --foreground: 0 0% 18%;
+    /* Archipelago color palette - Teal and Orange */
+    --background: 0 0% 100%;
+    --foreground: 220 30% 20%;
 
-    --card: 33 40% 94%;
-    --card-foreground: 0 0% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 20%;
 
-    --popover: 36 44% 96%;
-    --popover-foreground: 0 0% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 20%;
 
-    --primary: 0 0% 18%;
-    --primary-foreground: 36 44% 96%;
+    /* Primary: Deep Teal/Cyan from logo */
+    --primary: 187 80% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 30% 70%;
-    --secondary-foreground: 0 0% 18%;
+    /* Secondary: Lighter teal */
+    --secondary: 187 60% 92%;
+    --secondary-foreground: 187 80% 35%;
 
-    --muted: 33 30% 88%;
-    --muted-foreground: 0 0% 40%;
+    /* Muted backgrounds */
+    --muted: 200 20% 96%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 140 20% 50%;
-    --accent-foreground: 36 44% 96%;
+    /* Accent: Vibrant Orange from logo */
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 36 44% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 33 25% 85%;
-    --input: 33 25% 85%;
-    --ring: 0 0% 18%;
+    --border: 200 20% 88%;
+    --input: 200 20% 88%;
+    --ring: 187 80% 45%;
 
     --radius: 1rem;
 
-    /* Custom design tokens */
-    --tag-financing: 210 50% 75%;
-    --tag-lifestyle: 140 20% 70%;
-    --tag-community: 25 35% 60%;
-    --tag-wellness: 280 30% 75%;
-    --tag-travel: 195 50% 70%;
-    --tag-creativity: 330 40% 75%;
-    --tag-growth: 50 45% 70%;
-
-    /* Polish design tokens */
-    --cream: 40 40% 90%;
-    --cream-foreground: 0 0% 18%;
-    --surface-elevated: 36 44% 98%;
-    --shadow-soft: 0 0% 0%;
+    /* Archipelago custom tokens */
+    --teal: 187 80% 45%;
+    --teal-light: 187 60% 92%;
+    --teal-dark: 200 85% 30%;
+    --orange: 25 95% 55%;
+    --orange-light: 25 95% 95%;
+    --navy: 220 50% 25%;
+    
+    /* Gradient for hero sections */
+    --gradient-primary: linear-gradient(135deg, hsl(200 85% 30%) 0%, hsl(187 80% 45%) 100%);
+    
+    /* Surface tokens */
+    --surface-elevated: 0 0% 100%;
+    --shadow-soft: 200 50% 20%;
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 0 0% 10%;
-    --foreground: 36 44% 96%;
+    --background: 220 30% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 14%;
-    --card-foreground: 36 44% 96%;
+    --card: 220 25% 14%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 36 44% 96%;
+    --popover: 220 30% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 36 44% 96%;
-    --primary-foreground: 0 0% 18%;
+    --primary: 187 75% 50%;
+    --primary-foreground: 220 30% 10%;
 
-    --secondary: 25 15% 30%;
-    --secondary-foreground: 36 44% 96%;
+    --secondary: 187 40% 20%;
+    --secondary-foreground: 187 60% 70%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 200 15% 60%;
 
-    --accent: 140 20% 45%;
-    --accent-foreground: 36 44% 96%;
+    --accent: 25 90% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
-    --destructive-foreground: 36 44% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 36 44% 96%;
+    --border: 220 20% 22%;
+    --input: 220 20% 22%;
+    --ring: 187 75% 50%;
 
-    /* Dark mode tag colors */
-    --tag-financing: 210 40% 45%;
-    --tag-lifestyle: 140 20% 40%;
-    --tag-community: 25 30% 40%;
-    --tag-wellness: 280 25% 45%;
-    --tag-travel: 195 40% 45%;
-    --tag-creativity: 330 35% 45%;
-    --tag-growth: 50 40% 45%;
-
-    /* Dark mode polish tokens */
-    --cream: 40 20% 25%;
-    --cream-foreground: 36 44% 96%;
-    --surface-elevated: 0 0% 16%;
-    --shadow-soft: 0 0% 0%;
+    /* Dark mode custom tokens */
+    --teal: 187 75% 50%;
+    --teal-light: 187 40% 20%;
+    --teal-dark: 200 70% 40%;
+    --orange: 25 90% 55%;
+    --orange-light: 25 50% 20%;
+    --navy: 220 40% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(200 70% 35%) 0%, hsl(187 75% 50%) 100%);
+    
+    --surface-elevated: 220 25% 16%;
+    --shadow-soft: 220 50% 5%;
   }
 }
 
@@ -127,16 +127,22 @@ All colors MUST be HSL.
   }
 
   .card-hover:hover {
-    box-shadow: 0 20px 40px -10px hsl(var(--shadow-soft) / 0.15);
+    box-shadow: 0 20px 40px -10px hsl(var(--shadow-soft) / 0.2);
   }
 
   .pill-nav {
     @apply rounded-full bg-[hsl(var(--surface-elevated))] backdrop-blur-lg border border-border/50;
+    box-shadow: 0 2px 12px -2px hsl(var(--shadow-soft) / 0.08);
   }
 
   .floating-button {
-    @apply w-12 h-12 rounded-full bg-[hsl(var(--cream)/0.9)] backdrop-blur-sm flex items-center justify-center text-[hsl(var(--cream-foreground))] hover:bg-[hsl(var(--cream))] hover:scale-110 transition-all duration-300;
+    @apply w-12 h-12 rounded-full bg-primary/10 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300;
     box-shadow: 0 4px 12px -2px hsl(var(--shadow-soft) / 0.15);
+  }
+
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-primary);
   }
 
   /* Animation keyframes */
@@ -235,31 +241,20 @@ All colors MUST be HSL.
     animation-fill-mode: forwards;
   }
 
-  .tag-financing {
-    @apply bg-[hsl(var(--tag-financing))] text-primary;
+  /* Tag colors updated for Archipelago theme */
+  .tag-project {
+    @apply bg-[hsl(var(--orange-light))] text-[hsl(var(--orange))];
   }
 
-  .tag-lifestyle {
-    @apply bg-[hsl(var(--tag-lifestyle))] text-primary;
+  .tag-education {
+    @apply bg-[hsl(var(--teal-light))] text-[hsl(var(--teal-dark))];
   }
 
-  .tag-community {
-    @apply bg-[hsl(var(--tag-community))] text-primary;
+  .tag-news {
+    @apply bg-[hsl(var(--secondary))] text-[hsl(var(--secondary-foreground))];
   }
 
-  .tag-wellness {
-    @apply bg-[hsl(var(--tag-wellness))] text-primary;
-  }
-
-  .tag-travel {
-    @apply bg-[hsl(var(--tag-travel))] text-primary;
-  }
-
-  .tag-creativity {
-    @apply bg-[hsl(var(--tag-creativity))] text-primary;
-  }
-
-  .tag-growth {
-    @apply bg-[hsl(var(--tag-growth))] text-primary;
+  .tag-results {
+    @apply bg-accent/10 text-accent;
   }
 }
