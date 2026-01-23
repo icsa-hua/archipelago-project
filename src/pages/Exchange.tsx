@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
@@ -24,6 +25,7 @@ import { formatDistanceToNow } from 'date-fns';
 import { fr, enUS } from 'date-fns/locale';
 
 const Exchange = () => {
+  const navigate = useNavigate();
   const { user, isAuthenticated } = useAuth();
   const { language, t } = useLanguage();
   const [posts, setPosts] = useState<ForumPost[]>([]);
@@ -285,14 +287,22 @@ const Exchange = () => {
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <Avatar className="h-10 w-10 border-2 border-primary/20">
+                      <Avatar 
+                        className="h-10 w-10 border-2 border-primary/20 cursor-pointer hover:border-primary transition-colors"
+                        onClick={() => navigate(`/profile/${post.authorId}`)}
+                      >
                         <AvatarFallback className="bg-primary/10 text-primary font-semibold">
                           {post.authorAvatar}
                         </AvatarFallback>
                       </Avatar>
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="font-semibold text-foreground">{post.authorName}</span>
+                          <span 
+                            className="font-semibold text-foreground hover:text-primary cursor-pointer transition-colors"
+                            onClick={() => navigate(`/profile/${post.authorId}`)}
+                          >
+                            {post.authorName}
+                          </span>
                           <Badge variant="outline" className="text-xs">
                             {post.authorRole === 'professor' 
                               ? (language === 'en' ? 'Professor' : 'Professeur')
@@ -376,13 +386,22 @@ const Exchange = () => {
                     <div className="space-y-3 pt-2 border-t border-border">
                       {post.comments.map(comment => (
                         <div key={comment.id} className="flex gap-3 pl-4 border-l-2 border-primary/20">
-                          <Avatar className="h-8 w-8">
+                          <Avatar 
+                            className="h-8 w-8 cursor-pointer hover:ring-2 hover:ring-primary transition-all"
+                            onClick={() => navigate(`/profile/${comment.authorId}`)}
+                          >
                             <AvatarFallback className="bg-primary/10 text-primary text-xs">
                               {comment.authorAvatar}
                             </AvatarFallback>
                           </Avatar>
                           <div className="flex-1">
                             <div className="flex items-center gap-2">
+                              <span 
+                                className="font-medium text-sm text-foreground hover:text-primary cursor-pointer transition-colors"
+                                onClick={() => navigate(`/profile/${comment.authorId}`)}
+                              >
+                                {comment.authorName}
+                              </span>
                               <span className="font-medium text-sm text-foreground">{comment.authorName}</span>
                               <span className="text-xs text-muted-foreground">
                                 {formatDistanceToNow(comment.createdAt, { 
