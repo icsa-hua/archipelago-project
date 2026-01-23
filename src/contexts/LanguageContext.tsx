@@ -13,6 +13,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     'nav.home': 'Home',
     'nav.overview': 'Overview',
+    'nav.exchange': 'Exchange',
     'nav.news': 'News & Events',
     'nav.results': 'Results',
     'nav.consortium': 'Consortium',
@@ -140,6 +141,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Navigation
     "nav.home": "Accueil",
     "nav.overview": "Aperçu",
+    "nav.exchange": "Échange",
     "nav.news": "Actualités et événements",
     "nav.results": "Résultats",
     "nav.consortium": "Consortium",
