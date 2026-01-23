@@ -13,17 +13,72 @@ interface Deliverable {
 }
 
 const deliverables: Deliverable[] = [
-  { id: 'D1.1', titleKey: 'd1.1', workPackage: 1, dueMonth: 1, status: 'upcoming', lead: 'HUA' },
-  { id: 'D1.2', titleKey: 'd1.2', workPackage: 1, dueMonth: 3, status: 'upcoming', lead: 'VERDE' },
-  { id: 'D1.3', titleKey: 'd1.3', workPackage: 1, dueMonth: 3, status: 'upcoming', lead: 'VERDE' },
-  { id: 'D1.4', titleKey: 'd1.4', workPackage: 1, dueMonth: 3, status: 'upcoming', lead: 'SUA' },
-  { id: 'D2.1', titleKey: 'd2.1', workPackage: 2, dueMonth: 6, status: 'upcoming', lead: 'USP' },
-  { id: 'D2.2', titleKey: 'd2.2', workPackage: 2, dueMonth: 6, status: 'upcoming', lead: 'VERDE' },
-  { id: 'D2.3', titleKey: 'd2.3', workPackage: 2, dueMonth: 12, status: 'upcoming', lead: 'HUA' },
-  { id: 'D2.4', titleKey: 'd2.4', workPackage: 2, dueMonth: 12, status: 'upcoming', lead: 'SUA' },
-  { id: 'D2.5', titleKey: 'd2.5', workPackage: 2, dueMonth: 12, status: 'upcoming', lead: 'UTT' },
-  { id: 'D2.6', titleKey: 'd2.6', workPackage: 2, dueMonth: 12, status: 'upcoming', lead: 'USP' },
+  {
+    id: "D2.2",
+    titleKey: "d2.2",
+    workPackage: 2,
+    dueMonth: 10,
+    status: "upcoming",
+    lead: "SUA",
+  },
+  {
+    id: "D2.3",
+    titleKey: "d2.3",
+    workPackage: 2,
+    dueMonth: 12,
+    status: "upcoming",
+    lead: "SUA",
+  },
+  {
+    id: "D3.2",
+    titleKey: "d3.2",
+    workPackage: 3,
+    dueMonth: 20,
+    status: "upcoming",
+    lead: "SUA",
+  },
+  {
+    id: "D4.1",
+    titleKey: "d4.1",
+    workPackage: 4,
+    dueMonth: 20,
+    status: "upcoming",
+    lead: "UDC",
+  },
+  {
+    id: "D4.2",
+    titleKey: "d4.2",
+    workPackage: 4,
+    dueMonth: 20,
+    status: "upcoming",
+    lead: "UTT",
+  },
+  {
+    id: "D4.3",
+    titleKey: "d4.3",
+    workPackage: 4,
+    dueMonth: 20,
+    status: "upcoming",
+    lead: "HUA",
+  },
+  {
+    id: "D5.2",
+    titleKey: "d5.2",
+    workPackage: 5,
+    dueMonth: 20,
+    status: "upcoming",
+    lead: "HUA",
+  },
+  {
+    id: "D5.4",
+    titleKey: "d5.4",
+    workPackage: 5,
+    dueMonth: 6,
+    status: "completed",
+    lead: "HUA",
+  },
 ];
+
 
 const Results = () => {
   const { t } = useLanguage();

@@ -18,14 +18,16 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
   {
-    id: '1',
-    titleEn: 'ARCHIPELAGO Project Proposal Submitted',
-    titleFr: 'Proposition du projet ARCHIPELAGO soumise',
-    descriptionEn: 'We are excited to announce that the ARCHIPELAGO project proposal has been submitted to the Erasmus+ Capacity Building in Higher Education (CBHE) programme. The project aims to enhance digital education capacity in Small Island Developing States (SIDS).',
-    descriptionFr: 'Nous sommes ravis d\'annoncer que la proposition du projet ARCHIPELAGO a été soumise au programme Erasmus+ de renforcement des capacités dans l\'enseignement supérieur (CBHE). Le projet vise à améliorer les capacités d\'éducation numérique dans les petits États insulaires en développement (PEID).',
-    date: '2025-02-06',
-    type: 'announcement',
-    link: 'https://www.linkedin.com',
+    id: '2',
+    titleEn: 'ARCHIPELAGO Project Kick-off Meeting',
+    titleFr: 'Réunion de lancement du projet ARCHIPELAGO',
+    descriptionEn:
+      'The kick-off meeting of the ARCHIPELAGO project was successfully held on 15 December 2025, marking the official start of the project and bringing together all consortium partners to align on objectives, roles, and next steps.',
+    descriptionFr:
+      'La réunion de lancement du projet ARCHIPELAGO s’est tenue avec succès le 15 décembre 2025, marquant le démarrage officiel du projet et réunissant l’ensemble des partenaires du consortium afin de s’aligner sur les objectifs, les rôles et les prochaines étapes.',
+    date: '2025-12-15',
+    type: 'event',
+    link: 'https://www.linkedin.com/posts/intelligent-computer-systems-and-applications-icsa_archipelago-archipelago-archipelago-activity-7407017286626095104-5UJa',
     isLinkedIn: true,
   },
   {
@@ -121,11 +123,18 @@ const News = () => {
                   </p>
                   
                   {item.link && (
-                    <Button variant="outline" className="gap-2">
-                      {t('news.readMore')}
-                      <ExternalLink className="w-4 h-4" />
+                    <Button asChild variant="outline" className="gap-2">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {t("news.readMore")}
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
                     </Button>
                   )}
+
                 </div>
               </div>
             </article>

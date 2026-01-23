@@ -1,6 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo_archipelago.png';
+import euFunding from "@/assets/eu-cofunded.png";
+
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -12,9 +14,11 @@ const Footer = () => {
         <div className="bg-muted/50 rounded-2xl p-6 mb-8">
           <div className="flex flex-col md:flex-row items-start gap-6">
             <div className="flex-shrink-0">
-              <div className="w-20 h-14 bg-[#003399] rounded-lg flex items-center justify-center">
-                <span className="text-[#FFCC00] text-2xl">★</span>
-              </div>
+              <img
+                src={euFunding}
+                alt="Co-funded by the European Union"
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <div>
               <p className="text-sm font-semibold mb-2">{t('footer.fundedBy')} - {t('footer.erasmus')}</p>

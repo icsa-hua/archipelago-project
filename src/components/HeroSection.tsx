@@ -11,7 +11,7 @@ const HeroSection = () => {
             ARCHIPELAGO
           </h1>
           <p className="text-primary-foreground/90 text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto animate-slide-up stagger-1">
-            Addressing Remote Coastal Higher Education Inequalities through Platform Enabled Learning Approaches for a Green and resilient Ocean
+            ARCHIPELAGO is an Erasmus+ Capacity Building project supporting universities in Small Island Developing States through digital education and collaboration.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 pt-4 animate-slide-up stagger-2">

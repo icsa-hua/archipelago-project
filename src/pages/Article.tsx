@@ -5,6 +5,8 @@ import { getArticleById, getRelatedArticles } from "@/data/articles";
 import { Facebook, Twitter, Linkedin, Link2, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
+
 
 const Article = () => {
   const { id } = useParams<{ id: string }>();
@@ -40,13 +42,14 @@ const Article = () => {
       <main>
         {/* Back Navigation */}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <a
-            href="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to articles
-          </a>
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to articles
+        </Link>
+
         </div>
 
         {/* Hero Image */}
