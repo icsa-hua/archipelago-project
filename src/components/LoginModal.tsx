@@ -130,11 +130,11 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
             </Button>
           </form>
 
-          <p className="text-xs text-center text-muted-foreground">
+          {/* <p className="text-xs text-center text-muted-foreground">
             {language === 'en' 
               ? 'Demo: student@archipelago.eu / student123 or professor@archipelago.eu / professor123'
               : 'Démo: student@archipelago.eu / student123 ou professor@archipelago.eu / professor123'}
-          </p>
+          </p> */}
         </div>
       </DialogContent>
     </Dialog>
