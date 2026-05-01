@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Mail } from "lucide-react";
+// import { Twitter, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -26,7 +26,7 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          <div className="flex items-center justify-center gap-4 pt-6 animate-slide-up stagger-3">
+          {/* <div className="flex items-center justify-center gap-4 pt-6 animate-slide-up stagger-3">
             <a
               href="#twitter"
               className="w-12 h-12 rounded-full border-2 border-primary-foreground/30 hover:border-primary-foreground hover:bg-primary-foreground/10 transition-all flex items-center justify-center hover:scale-110"
@@ -48,7 +48,7 @@ const HeroSection = () => {
             >
               <Mail className="w-5 h-5 text-primary-foreground" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
