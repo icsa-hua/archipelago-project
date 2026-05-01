@@ -83,9 +83,9 @@ const Header = () => {
               <Link to="/overview" className={navItemClass}>
                 {t("nav.overview")}
               </Link>
-              <Link to="/exchange" className={navItemClass}>
+              {/* <Link to="/exchange" className={navItemClass}>
                 Exchange
-              </Link>
+              </Link> */}
               <Link to="/news" className={navItemClass}>
                 {t("nav.news")}
               </Link>
