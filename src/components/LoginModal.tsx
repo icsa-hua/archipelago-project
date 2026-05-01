@@ -54,7 +54,7 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
             {language === 'en' 
-              ? 'Access the ARCHIPELAGO Exchange Platform' 
+              ? 'Access the ARCHIPELAGO Knowledge Hub Platform' 
               : 'Accédez à la plateforme d\'échange ARCHIPELAGO'}
           </DialogDescription>
         </DialogHeader>
