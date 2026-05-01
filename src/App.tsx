@@ -10,7 +10,7 @@ import News from "./pages/News";
 import Results from "./pages/Results";
 import Consortium from "./pages/Consortium";
 import Contact from "./pages/Contact";
-import Exchange from "./pages/Exchange";
+// import Exchange from "./pages/Exchange";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
@@ -31,7 +31,7 @@ const App = () => (
               <Route path="/results" element={<Results />} />
               <Route path="/consortium" element={<Consortium />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/exchange" element={<Exchange />} />
+              {/* <Route path="/exchange" element={<Exchange />} /> */}
               <Route path="/profile/:userId" element={<Profile />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

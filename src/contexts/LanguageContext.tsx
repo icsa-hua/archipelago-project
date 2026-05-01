@@ -132,7 +132,7 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.address': 'Address',
     
     // Footer
-    'footer.fundedBy': 'This projet is co-funed by the European Union under the ',
+    'footer.fundedBy': 'This projet is co-funded by the European Union under the ',
     'footer.erasmus': 'Erasmus+ Programme',
     'footer.disclaimer': 'Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.',
     'footer.rights': '© 2025 ARCHIPELAGO. All rights reserved.',
